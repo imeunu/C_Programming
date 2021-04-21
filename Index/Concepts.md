@@ -13,8 +13,12 @@ For example, we want to display "Hello World"" on the screen. Without OS, we nee
 <br>
 OS is a huge library that offers a variety of functions in terms of providing these program interfaces.
 
-System calls provide the interface between application SW and the operating system. 
+__System calls__ provide the interface between application SW and the operating system. 
 <br>
 (Application) --> (C Library) --> (Kernel)
 <br>
 Library functions are connected with specific functions in system call.
+
+![ex](https://user-images.githubusercontent.com/68213812/115516319-f7381380-a2c0-11eb-949d-d83df006cb5d.png)
+
+For exmple, we call library function on application, 
