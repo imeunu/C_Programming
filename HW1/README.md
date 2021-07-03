@@ -1,4 +1,3 @@
-![HW1](https://user-images.githubusercontent.com/68213812/124346923-85fbd180-dc1c-11eb-921f-21f7cf526cf9.png)
 ## Traffic Fares Calculation
 <br>
 The subway fare is as follows when using a transportation card.
@@ -24,3 +23,5 @@ Get the fare and print it out when using passenger classification and transporta
 Note: Seoul Metro Freight Information Page
 <br>
 http://www.seoulmetro.co.kr/kr/page.do?nenuldx=354
+
+![HW1](https://user-images.githubusercontent.com/68213812/124346923-85fbd180-dc1c-11eb-921f-21f7cf526cf9.png)
