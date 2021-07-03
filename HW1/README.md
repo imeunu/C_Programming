@@ -20,8 +20,6 @@ Age and subway distance are inputted as scanf().
 <br>
 Get the fare and print it out when using passenger classification and transportation cards.
 <br>
-Note: Seoul Metro Freight Information Page
-<br>
-http://www.seoulmetro.co.kr/kr/page.do?nenuldx=354
+Note: Seoul Metro Freight Information Page (http://www.seoulmetro.co.kr/kr/page.do?nenuldx=354)
 
 ![HW1](https://user-images.githubusercontent.com/68213812/124346923-85fbd180-dc1c-11eb-921f-21f7cf526cf9.png)
