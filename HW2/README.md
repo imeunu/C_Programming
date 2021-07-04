@@ -1,5 +1,5 @@
 ## Calculator
-<br>
+
 Design a program that calculates the arithmetic operation by printing the menu.
 <br>
 It receives two numbers and outputs the results of the selected operation.
