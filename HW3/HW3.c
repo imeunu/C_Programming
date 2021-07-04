@@ -1,27 +1,27 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-int main() {                 //2015019943 ¼öÇÐ°ú ÀÓÀº¿ì
-	double score[5];         //5¸íÀÇ °¨µ¶°üÀÇ Á¡¼ö¿Í ÃÖ´ë°ª, ÃÖ¼Ò°ª, ³­ÀÌµµ, ÃÖÁ¾Á¡¼ö¸¦ ¼±¾ðÇÕ´Ï´Ù
+int main() {
+	double score[5];         //5ëª…ì˜ ê°ë…ê´€ì˜ ì ìˆ˜ì™€ ìµœëŒ€ê°’, ìµœì†Œê°’, ë‚œì´ë„, ìµœì¢…ì ìˆ˜ë¥¼ ì„ ì–¸í•©ë‹ˆë‹¤
 	double max, min, diff, final;
-	int cont;                //¸Þ´º¿¡¼­ ÀÔ·Â¹ÞÀ» Á¤¼ö¸¦ ¼±¾ðÇÕ´Ï´Ù
+	int cont;                //ë©”ë‰´ì—ì„œ ìž…ë ¥ë°›ì„ ì •ìˆ˜ë¥¼ ì„ ì–¸í•©ë‹ˆë‹¤
 	while (1) {
-		printf("³­ÀÌµµ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");   //¹«ÇÑ·çÇÁ¸¦ ¼³Á¤ ÈÄ³­ÀÌµµ, ±×¸®°í ¹Ýº¹¹®À¸·Î °¨µ¶°üÀÇ Á¡¼ö¸¦ ÀÔ·Â¹Þ½À´Ï´Ù
+		printf("ë‚œì´ë„ë¥¼ ìž…ë ¥í•˜ì„¸ìš” : ");   //ë¬´í•œë£¨í”„ë¥¼ ì„¤ì • í›„ë‚œì´ë„, ê·¸ë¦¬ê³  ë°˜ë³µë¬¸ìœ¼ë¡œ ê°ë…ê´€ì˜ ì ìˆ˜ë¥¼ ìž…ë ¥ë°›ìŠµë‹ˆë‹¤
 		scanf("%lf", &diff);
 		min = 10, max = 0;
 		for (int i = 0; i < 5; i++) {
-			printf("%d¹øÂ° Ã¤Á¡°ü Á¡¼ö : ", i + 1);
+			printf("%dë²ˆì§¸ ì±„ì ê´€ ì ìˆ˜ : ", i + 1);
 			scanf("%lf", &score[i]);
-			if (score[i] >= max) {          //ÃÊ±â ÃÖ´ë°ªÀ» 0, ÃÖ¼Ò°ªÀ» 10À¸·Î ÀÔ·Â¹ÞÀº ÈÄ, °¨µ¶°üÀÇ Á¡¼ö¸¦ ÀÔ·Â¹ÞÀ»¶§¸¶´Ù ÃÖ´ë,ÃÖ¼Ò°ªÀ» ºñ±³ÇÏ¿© °»½ÅÇØÁÝ´Ï´Ù
+			if (score[i] >= max) {          //ì´ˆê¸° ìµœëŒ€ê°’ì„ 0, ìµœì†Œê°’ì„ 10ìœ¼ë¡œ ìž…ë ¥ë°›ì€ í›„, ê°ë…ê´€ì˜ ì ìˆ˜ë¥¼ ìž…ë ¥ë°›ì„ë•Œë§ˆë‹¤ ìµœëŒ€,ìµœì†Œê°’ì„ ë¹„êµí•˜ì—¬ ê°±ì‹ í•´ì¤ë‹ˆë‹¤
 				max = score[i];
 			}
 			if (score[i] <= min) {
 				min = score[i];
 			}
 		}
-		printf("°á°ú\n==========================\n");
+		printf("ê²°ê³¼\n==========================\n");
 
-		for (int i = 0; i < 5; i++) {      //ÀÔ·Â¹ÞÀº Á¡¼öµéÀ» ³ª¿­ÇÏ°í, °¢°¢ÀÌ ÃÖ´ë,ÃÖ¼Ò°ªÀ»¶§ (m),(M)À» Ãâ·ÂÇÏµµ·Ï ¼³Á¤ÇÕ´Ï´Ù
+		for (int i = 0; i < 5; i++) {      //ìž…ë ¥ë°›ì€ ì ìˆ˜ë“¤ì„ ë‚˜ì—´í•˜ê³ , ê°ê°ì´ ìµœëŒ€,ìµœì†Œê°’ì„ë•Œ (m),(M)ì„ ì¶œë ¥í•˜ë„ë¡ ì„¤ì •í•©ë‹ˆë‹¤
 			printf("%.1lf", score[i]);
 			if (max == score[i]) {
 				printf("(M)");
@@ -31,10 +31,10 @@ int main() {                 //2015019943 ¼öÇÐ°ú ÀÓÀº¿ì
 			}
 			printf(" ");
 		}
-		printf("\n==========================\n");   //ÃÖÁ¾Á¡¼ö´Â °¢ °¨µ¶°üÀÇ Á¡¼öÀÇ ÇÕ¿¡¼­ ÃÖ´ë¿Í ÃÖ¼Ò°ªÀ» »« °ª¿¡ ³­ÀÌµµ¸¦ °öÇÑ°ÍÀ¸·Î ¼³Á¤ÇÕ´Ï´Ù
+		printf("\n==========================\n");   //ìµœì¢…ì ìˆ˜ëŠ” ê° ê°ë…ê´€ì˜ ì ìˆ˜ì˜ í•©ì—ì„œ ìµœëŒ€ì™€ ìµœì†Œê°’ì„ ëº€ ê°’ì— ë‚œì´ë„ë¥¼ ê³±í•œê²ƒìœ¼ë¡œ ì„¤ì •í•©ë‹ˆë‹¤
 		final = diff * (score[0] + score[1] + score[2] + score[3] + score[4] - min - max);
 		printf("\nScore : %.1lf\n\n", final);
-		printf("°è¼ÓÇÏ½Ã°Ú½À´Ï±î?(1:°è¼Ó/2:ÁßÁö)\n"); //¸¸¾à 2.Á¾·á ¸¦ ¼±ÅÃÇÏ¸é ¹«ÇÑ·çÇÁ¸¦ breakÇÏµµ·Ï ¼³Á¤ÇÕ´Ï´Ù
+		printf("ê³„ì†í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(1:ê³„ì†/2:ì¤‘ì§€)\n"); //ë§Œì•½ 2.ì¢…ë£Œ ë¥¼ ì„ íƒí•˜ë©´ ë¬´í•œë£¨í”„ë¥¼ breakí•˜ë„ë¡ ì„¤ì •í•©ë‹ˆë‹¤
 		scanf("%d", &cont);
 		if (cont == 2) break;
 	}
