@@ -1,30 +1,30 @@
-#define _CRT_SECURE_NO_WARNINGS          //2015019943 ¼öÇĞ°ú ÀÓÀº¿ì
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-void inputArray(int* p);     //inputArray,reverseArray ÇÔ¼öÀÔ´Ï´Ù
+void inputArray(int* p);     //inputArray,reverseArray í•¨ìˆ˜ì…ë‹ˆë‹¤
 void reverseArray(int* p);
 
 int main() {
-    int array[5];            //Å©±â°¡ 5ÀÎ ¹è¿­À» ¼±¾ğÇÏ°í, Æ÷ÀÎÅÍ·Î ±× ¹è¿­À» ÁöÁ¤ÇØÁİ´Ï´Ù
+    int array[5];            //í¬ê¸°ê°€ 5ì¸ ë°°ì—´ì„ ì„ ì–¸í•˜ê³ , í¬ì¸í„°ë¡œ ê·¸ ë°°ì—´ì„ ì§€ì •í•´ì¤ë‹ˆë‹¤
     int* p = array;
-    inputArray(array);                 //inputarray, reversearray ÇÔ¼ö¸¦ È£ÃâÇÕ´Ï´Ù
+    inputArray(array);                 //inputarray, reversearray í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•©ë‹ˆë‹¤
     reverseArray(array);
-    printf("- ¹è¿­ÀÇ ³»¿ëÀ» µÚÁı´ÂÁß -\n");
-    printf("ÃÖÁ¾ ¹è¿­ÀÇ ³»¿ë : ");
-    for (int i = 0; i < 5; i++) {       //Æ÷ÀÎÅÍ¿¬»ê°ú for¹®À¸·Î µÚÁıÀº ¹è¿­À» Ãâ·ÂÇÕ´Ï´Ù
+    printf("- ë°°ì—´ì˜ ë‚´ìš©ì„ ë’¤ì§‘ëŠ”ì¤‘ -\n");
+    printf("ìµœì¢… ë°°ì—´ì˜ ë‚´ìš© : ");
+    for (int i = 0; i < 5; i++) {       //í¬ì¸í„°ì—°ì‚°ê³¼ forë¬¸ìœ¼ë¡œ ë’¤ì§‘ì€ ë°°ì—´ì„ ì¶œë ¥í•©ë‹ˆë‹¤
         printf("%d ", *(p + i));
     }
     return 0;
 }
 
-void inputArray(int* p) {              //´Ù¼¸°³ÀÇ Á¤¼ö¸¦ ÀÔ·Â¹Ş´Â inputarrayÇÔ¼ö¸¦ for¹®°ú scanfÇÔ¼ö·Î ¼³Á¤ÇÕ´Ï´Ù
-    printf("´Ù¼¸°³ÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+void inputArray(int* p) {              //ë‹¤ì„¯ê°œì˜ ì •ìˆ˜ë¥¼ ì…ë ¥ë°›ëŠ” inputarrayí•¨ìˆ˜ë¥¼ forë¬¸ê³¼ scanfí•¨ìˆ˜ë¡œ ì„¤ì •í•©ë‹ˆë‹¤
+    printf("ë‹¤ì„¯ê°œì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
     for (int i = 0; i < 5; i++) {
         scanf("%d", &*(p + i));
     }
 }
 
-void reverseArray(int* p) {       //Ã¹¹øÂ°¿Í ´Ù¼¸¹øÂ° ¹è¿­, µÎ¹øÂ°¿Í ³×¹øÂ° ¹è¿­ÀÇ ÀÚ¸®¸¦ ¹Ù²ãÁÖµµ·Ï reversearrayÇÔ¼ö¸¦ ¼³Á¤ÇÕ´Ï´Ù
+void reverseArray(int* p) {       //ì²«ë²ˆì§¸ì™€ ë‹¤ì„¯ë²ˆì§¸ ë°°ì—´, ë‘ë²ˆì§¸ì™€ ë„¤ë²ˆì§¸ ë°°ì—´ì˜ ìë¦¬ë¥¼ ë°”ê¿”ì£¼ë„ë¡ reversearrayí•¨ìˆ˜ë¥¼ ì„¤ì •í•©ë‹ˆë‹¤
     int a, b;
     a = *p;
     b = *(p + 1);
