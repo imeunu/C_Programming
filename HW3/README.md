@@ -1,5 +1,5 @@
 ## Scoring diving competitions
-<br>
+
 The grading team consists of five people to enter the difficulty level and the scores of each grading officer. Save it using an array.
 <br>
 Calculate the final score by multiplying the difficulty by adding scores except the highest and the lowest score among the scores received.
