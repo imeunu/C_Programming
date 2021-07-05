@@ -1,36 +1,36 @@
-#define _CRT_SECURE_NO_WARNINGS             //2015019943 ¼öÇÐ°ú ÀÓÀº¿ì
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
 
-char myid[7] = "imeunu";                    //Àü¿ªº¯¼ö¿¡ ¾ÆÀÌµð¿Í ºñ¹Ð¹øÈ£¸¦ ÀúÀåÇÕ´Ï´Ù
+char myid[7] = "imeunu";                    //ì „ì—­ë³€ìˆ˜ì— ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ ì €ìž¥í•©ë‹ˆë‹¤
 char mypw[5] = "1234";
 
 
-int login(char* id, char* pw) {            //¹ÝÈ¯ÇüÀÌ Á¤¼öÇüÀÎ loginÇÔ¼ö¿¡ Á¤Àû Áö¿ªº¯¼ö¸¦ ½ÃµµÈ½¼ö·Î ÀúÀåÇÕ´Ï´Ù
+int login(char* id, char* pw) {            //ë°˜í™˜í˜•ì´ ì •ìˆ˜í˜•ì¸ loginí•¨ìˆ˜ì— ì •ì  ì§€ì—­ë³€ìˆ˜ë¥¼ ì‹œë„íšŸìˆ˜ë¡œ ì €ìž¥í•©ë‹ˆë‹¤
     static int try = 3;
-    if (strcmp(myid, id) != 0 || strcmp(mypw, pw) != 0) {      //ÀúÀåµÈ ¾ÆÀÌµð,ºñ¹Ð¹øÈ£¸¦ ÀÔ·Â¹ÞÀº°Í°ú strcmpÇÔ¼ö·Î ºñ±³ÇÏ¿© ¼º°øÀÎÁö ½ÇÆÐÀÎÁö °áÁ¤ÇÕ´Ï´Ù
+    if (strcmp(myid, id) != 0 || strcmp(mypw, pw) != 0) {      //ì €ìž¥ëœ ì•„ì´ë””,ë¹„ë°€ë²ˆí˜¸ë¥¼ ìž…ë ¥ë°›ì€ê²ƒê³¼ strcmpí•¨ìˆ˜ë¡œ ë¹„êµí•˜ì—¬ ì„±ê³µì¸ì§€ ì‹¤íŒ¨ì¸ì§€ ê²°ì •í•©ë‹ˆë‹¤
         try--;
         if (try == 0) {
-            printf("\n·Î±×ÀÎ¿¡ ½ÇÆÐÇÏ¿´½À´Ï´Ù. ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù."); //·Î±×ÀÎ¿¡ ¼º°øÇÏ°Å³ª 3È¸ ½ÇÆÐÇÏ¸é 0À» ¹ÝÈ¯ÇÏµµ·Ï ¼³Á¤ÇÕ´Ï´Ù
+            printf("\në¡œê·¸ì¸ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤. í”„ë¡œê·¸ëž¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤."); //ë¡œê·¸ì¸ì— ì„±ê³µí•˜ê±°ë‚˜ 3íšŒ ì‹¤íŒ¨í•˜ë©´ 0ì„ ë°˜í™˜í•˜ë„ë¡ ì„¤ì •í•©ë‹ˆë‹¤
             return 0;
         }
-        printf("\n·Î±×ÀÎ¿¡ ½ÇÆÐÇß½À´Ï´Ù.\n");
-        printf("·Î±×ÀÎ ½Ãµµ È½¼ö %dÈ¸ ³²¾Ò½À´Ï´Ù.\n\n", try);
+        printf("\në¡œê·¸ì¸ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.\n");
+        printf("ë¡œê·¸ì¸ ì‹œë„ íšŸìˆ˜ %díšŒ ë‚¨ì•˜ìŠµë‹ˆë‹¤.\n\n", try);
     }
     else {
-        printf("\n·Î±×ÀÎ ¼º°ø!");
+        printf("\në¡œê·¸ì¸ ì„±ê³µ!");
         return 0;
     }
 }
 
 int main() {
-    char id[100], pw[100];                    //ÀÔ·Â¹ÞÀ» ¾ÆÀÌµð¿Í ºñ¹Ð¹øÈ£¸¦ ¼±¾ðÇÕ´Ï´Ù
+    char id[100], pw[100];                    //ìž…ë ¥ë°›ì„ ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ ì„ ì–¸í•©ë‹ˆë‹¤
     int a;
     while (1) {
-        printf("·Î±×ÀÎÇÏ¼¼¿ä\n");             //¾ÆÀÌµð¿Í ºñ¹Ð¹øÈ£¸¦ ÀÔ·Â¹Þ´Â ¹«ÇÑ·çÇÁ¸¦ ¼³Á¤ÇÏ°í, ¹ÝÈ¯¹Þ´Â °ªÀÌ 0ÀÏ °æ¿ì, breakÇÏµµ·Ï ¼³Á¤ÇÕ´Ï´Ù
-        printf("¾ÆÀÌµð : ");
+        printf("ë¡œê·¸ì¸í•˜ì„¸ìš”\n");             //ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ ìž…ë ¥ë°›ëŠ” ë¬´í•œë£¨í”„ë¥¼ ì„¤ì •í•˜ê³ , ë°˜í™˜ë°›ëŠ” ê°’ì´ 0ì¼ ê²½ìš°, breakí•˜ë„ë¡ ì„¤ì •í•©ë‹ˆë‹¤
+        printf("ì•„ì´ë”” : ");
         scanf("%s", &id);
-        printf("¾ÏÈ£ : ");
+        printf("ì•”í˜¸ : ");
         scanf("%s", &pw);
         a = login(id, pw);
         if (a == 0) break;
