@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS             //2015019943 ¼öÇĞ°ú ÀÓÀº¿ì
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -21,8 +21,8 @@ int main() {
 	char* output;
 	gets(input);
 	output = toUpper(input);
-	printf("¿ø¹® : %s\n", input);
-	printf("´ë¹®ÀÚ : %s", output);
+	printf("ì›ë¬¸ : %s\n", input);
+	printf("ëŒ€ë¬¸ì : %s", output);
 
 	free(output);
 	return 0;
