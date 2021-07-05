@@ -1,5 +1,5 @@
 ## Timetable Program
-### Basics
+### Basic rules
 - Input the days and hours that should appear in the timetable (Start Day to End Day, Start Time to End Time) and managed by the user. Both days and hours are treated consecutively. For example, Monday to Friday, Monday to Saturday, 9:00 to 18:00, 10:00 to 20:00)
 - Time is managed on an hourly basis.
 - It offers three functions. (Input subject, Deleting subjects, Timetable status)
@@ -7,7 +7,7 @@
 ### Initiate
 - Only once at startup, you are given the day and time of the week to organize the timetable.
 - Current timetables and menus are always printed at the end of each function.
-### Function
+### Functions
 1. Input subject
 - Enter subject name, professor name, classroom, credit, class time, day, start time
 - Store subject names limited to 2 characters (only 2 characters long).
