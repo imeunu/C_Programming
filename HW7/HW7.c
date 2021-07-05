@@ -1,19 +1,19 @@
-#define _CRT_SECURE_NO_WARNINGS             //2015019943 ¼öÇÐ°ú ÀÓÀº¿ì
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 
-int* makeVector(int a) {                    //µ¿ÀûÇÒ´çÇÏ¿© ¹è¿­À» ¸¸µå´Â ÇÔ¼ö¸¦ ¸¸µé¾ú½À´Ï´Ù
-	int* vector = (int*)calloc(a, sizeof(int)); //mainÇÔ¼ö¿¡¼­ ±æÀÌ¸¦ ¹Þ¾Æ¼­ for¹®À» »ç¿ëÇÏ¿© 
-	*vector = rand() % 10 + 1;                  //0¿¡¼­ 10±îÁöÀÇ ³­¼ö¸¦ 0¿¡¼­ ´©ÀûÇÏ´Â ¹æ¹ýÀ¸·Î ¸¸µé¾ú½À´Ï´Ù
+int* makeVector(int a) {                    //ë™ì í• ë‹¹í•˜ì—¬ ë°°ì—´ì„ ë§Œë“œëŠ” í•¨ìˆ˜ë¥¼ ë§Œë“¤ì—ˆìŠµë‹ˆë‹¤
+	int* vector = (int*)calloc(a, sizeof(int)); //mainí•¨ìˆ˜ì—ì„œ ê¸¸ì´ë¥¼ ë°›ì•„ì„œ forë¬¸ì„ ì‚¬ìš©í•˜ì—¬ 
+	*vector = rand() % 10 + 1;                  //0ì—ì„œ 10ê¹Œì§€ì˜ ë‚œìˆ˜ë¥¼ 0ì—ì„œ ëˆ„ì í•˜ëŠ” ë°©ë²•ìœ¼ë¡œ ë§Œë“¤ì—ˆìŠµë‹ˆë‹¤
 	for (int i = 1; i < a; i++) {
 		*(vector + i) = *(vector + i - 1) + rand() % 10 + 1;
 	}
 	return vector;
 }
 
-int printVector(int* A, int a) {          //¹è¿­À» Ãâ·ÂÇÏ´Â ÇÔ¼ö¸¦ ¼±¾ðÇÏ¿´½À´Ï´Ù
+int printVector(int* A, int a) {          //ë°°ì—´ì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜ë¥¼ ì„ ì–¸í•˜ì˜€ìŠµë‹ˆë‹¤
 	printf("[");
 	for (int i = 0; i < a; i++) {
 		printf("%3d", *(A + i));
@@ -22,14 +22,14 @@ int printVector(int* A, int a) {          //¹è¿­À» Ãâ·ÂÇÏ´Â ÇÔ¼ö¸¦ ¼±¾ðÇÏ¿´½À´Ï´
 }
 
 int main() {
-	int a, b;                         //¹è¿­ÀÇ Å©±â¸¦ ÀÔ·Â¹ÞÀ» a,b¸¦ ¼±¾÷ÇÕ´Ï´Ù
-	int count1 = 0, count2 = 0;       //C¹è¿­À» ¸¸µé±â À§ÇØ count1,count2À» ¼±¾ðÇÏ¿´½À´Ï´Ù
-	int* A, * B;                      //A,B¹è¿­À» ¸¸µé±â À§ÇØ A,B Æ÷ÀÎÅÍ¸¦ ¼±¾ðÇÕ´Ï´Ù
+	int a, b;                         //ë°°ì—´ì˜ í¬ê¸°ë¥¼ ìž…ë ¥ë°›ì„ a,bë¥¼ ì„ ì—…í•©ë‹ˆë‹¤
+	int count1 = 0, count2 = 0;       //Cë°°ì—´ì„ ë§Œë“¤ê¸° ìœ„í•´ count1,count2ì„ ì„ ì–¸í•˜ì˜€ìŠµë‹ˆë‹¤
+	int* A, * B;                      //A,Bë°°ì—´ì„ ë§Œë“¤ê¸° ìœ„í•´ A,B í¬ì¸í„°ë¥¼ ì„ ì–¸í•©ë‹ˆë‹¤
 	srand(time(NULL));
 
-	printf("¹è¿­ AÀÇ Å©±â´Â ? ");
+	printf("ë°°ì—´ Aì˜ í¬ê¸°ëŠ” ? ");
 	scanf("%d", &a);
-	printf("¹è¿­ BÀÇ Å©±â´Â ? ");
+	printf("ë°°ì—´ Bì˜ í¬ê¸°ëŠ” ? ");
 	scanf("%d", &b);
 
 	A = makeVector(a);
@@ -37,7 +37,7 @@ int main() {
 
 	int* C = (int*)calloc(a + b, sizeof(int));
 	for (int i = 0; i < a + b; i++) {
-		if (*(A + count1) <= *(B + count2)) {  //A,B¹è¿­ÀÇ count1,count2¹øÂ° ¿ø¼ÒÁß ´õ ÀÛÀº ¼ö¸¦ C¹è¿­ÀÇi¹øÂ° ¿ø¼Ò·Î ÁöÁ¤ÇÕ´Ï´Ù
+		if (*(A + count1) <= *(B + count2)) {  //A,Bë°°ì—´ì˜ count1,count2ë²ˆì§¸ ì›ì†Œì¤‘ ë” ìž‘ì€ ìˆ˜ë¥¼ Cë°°ì—´ì˜ië²ˆì§¸ ì›ì†Œë¡œ ì§€ì •í•©ë‹ˆë‹¤
 			*(C + i) = *(A + count1);
 			count1++;
 		}
@@ -45,8 +45,8 @@ int main() {
 			*(C + i) = *(B + count2);
 			count2++;
 		}
-		if (count1 == a) {                     //¸¸¾à count1ÀÌa¿¡ µµ´ÞÇÏ¸é CÀÇ i+1¹øÂ° ¿ø¼ÒºÎÅÍ´Â BÀÇ count2+1¹øÂ° ¿ø¼Ò·Î ¸ðµÎ
-			for (int j = i + 1; j < a + b; j++) { //Ã¤¿ì°í, for¹®À» ¹þ¾î³ªµµ·Ï ¼³Á¤ÇÏ¿´½À´Ï´Ù
+		if (count1 == a) {                     //ë§Œì•½ count1ì´aì— ë„ë‹¬í•˜ë©´ Cì˜ i+1ë²ˆì§¸ ì›ì†Œë¶€í„°ëŠ” Bì˜ count2+1ë²ˆì§¸ ì›ì†Œë¡œ ëª¨ë‘
+			for (int j = i + 1; j < a + b; j++) { //ì±„ìš°ê³ , forë¬¸ì„ ë²—ì–´ë‚˜ë„ë¡ ì„¤ì •í•˜ì˜€ìŠµë‹ˆë‹¤
 				*(C + j) = *(B + count2);
 				count2++;
 			}
@@ -65,13 +65,13 @@ int main() {
 	printVector(A, a);
 	printf("B ");
 	printVector(B, b);
-	for (int i = 0; i < 4 + 3 * b; i++) {   //-ÀÇ °³¼ö´Â B¹è¿­ÀÇ ±æÀÌ¿¡ ¸Â°Ô Ãâ·ÂµÇµµ·Ï ¼³Á¤ÇÏ¿´½À´Ï´Ù
+	for (int i = 0; i < 4 + 3 * b; i++) {   //-ì˜ ê°œìˆ˜ëŠ” Bë°°ì—´ì˜ ê¸¸ì´ì— ë§žê²Œ ì¶œë ¥ë˜ë„ë¡ ì„¤ì •í•˜ì˜€ìŠµë‹ˆë‹¤
 		printf("-");
 	}
-	printf("\nº´ÇÕµÈ ¹è¿­ (Å©±â : %d)\nC ", a + b);
+	printf("\në³‘í•©ëœ ë°°ì—´ (í¬ê¸° : %d)\nC ", a + b);
 	printVector(C, a + b);
 
-	free(A);   //callocÇÔ¼ö¸¦ »ç¿ëÇÏ¿´À¸´Ï freeÇÔ¼ö¸¦ »ç¿ëÇÏ¿´½À´Ï´Ù
+	free(A);   //callocí•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì˜€ìœ¼ë‹ˆ freeí•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì˜€ìŠµë‹ˆë‹¤
 	free(B);
 	free(C);
 	return 0;
