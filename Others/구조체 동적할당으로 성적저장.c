@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS             //2015019943 ¼öÇĞ°ú ÀÓÀº¿ì
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -22,16 +22,16 @@ void scoreprintaray(SCORE *a, int n) {
 		printf("%s %d %d %d %.1lf\n", (a + i)->name, (a + i)->.kor, (a + i)->eng, (a + i)->mat, ((a + i)->kor + (a + i)->eng + (a + i)->mat) / 3.0);
 	}
 	printf("========================\m");
-	printf("ÃÑ %d¸í\n", n);
+	printf("ì´ %dëª…\n", n);
 }
 
 SCORE scoreinput() {
 	SCORE me;
-	printf("ÀÌ¸§ : ");
+	printf("ì´ë¦„ : ");
 	scanf("%s", me.name);
-	printf("¼ºÀû (±¹¾î ¿µ¾î ¼öÇĞ) : ");
+	printf("ì„±ì  (êµ­ì–´ ì˜ì–´ ìˆ˜í•™) : ");
 	scanf("%d %d %d", &me.kor, &me.eng, &me.mat);
-	printf("### ÀÔ·ÂµÇ¾ú½À´Ï´Ù\n");
+	printf("### ì…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤\n");
 	return me;
 }
 int main() {
@@ -39,7 +39,7 @@ int main() {
 	int n = 0, menu;
 
 	while (1) {
-		printf("[¼ºÀû°ü¸®]1.ÀÔ·Â 2.Ãâ·Â 0.Á¾·á\n");
+		printf("[ì„±ì ê´€ë¦¬]1.ì…ë ¥ 2.ì¶œë ¥ 0.ì¢…ë£Œ\n");
 		scanf("%d", &menu);
 		if (menu == 0)
 			break;
